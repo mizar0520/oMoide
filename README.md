@@ -20,7 +20,10 @@ rails s
 ### heroku への push
 
 ```
+  heroku login
+     * windows環境では、gitbashなどでのログインがうまく行かなかったため、cmdでheroku loginを行った
   heroku git:remote -a omoide-falk
+     * herokuでは予め「omodie-falk」アプリケーションを作成しておく
   git push heroku master
   heroku run:detached rake db:schema:load
   heroku run:detached rake db:seed
